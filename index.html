@@ -5,37 +5,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>✨ Self Care Center ✨
+    <main class="main">
+      <section class="content">
+    <h1 class = "title">✨ Self Care Center ✨</h1>
+    <section class = "message-form">
+      <h3 class="message-form__title">What type of message?</h3>
+      <form class="message-form__form">
+        <div>
+          <input type="radio" id="affirmation" name="message-type" value="affirmation"/>
+          <label class="message-form__label" for="affirmation">affirmation</label>
+          <input  type="radio" id="mantra" name="message-type" value="mantra" />
+          <label class="message-form__label" for="mantra">mantra</label>
+        </div>
+        <button class="message-form__button" type='submit'>Recieve Message</button>
+      </form>
+      </section>
 
-    </h1>
-      <div class="prompt">
-        <h3> 
-          What type of Message?
-        </h3>
-      </div>
-      <section class="container">
-  <span class = "Affirmation">
-    <input type="radio" id="AffirmationButton" name="drone" value="Affirmation"/>
-    <label for="Affirmation">Affirmation</label>
-  </span class= "Affirmation">
 
-  <span class = "Mantra">
-    <input type="radio" id="MantrasButton" name="drone" value="Mantra" />
-    <label for="Mantra">Mantra</label>
-  </span class = "Mantra">
-  <div class = "message"> 
-    <input type = 'button' 
-    id = 'recieveMessage' 
-    style =background-color:#2694d8 
-    value = 'Recieve Message'>
-  </div>
-</section class="container">
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
   <section class="container2">
     <div class="messageDisplay">
       <p id="displayMessage"></p>
@@ -50,5 +36,9 @@
   </section class="container2">
   <script type="text/javascript" src="data.js"></script>  
   <script type="text/javascript" src="main.js"></script>
+  </div>
+
+</section>
+</main>
   </body>
 </html>
