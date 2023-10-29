@@ -1,4 +1,4 @@
-var affirtmations = [
+var affirmations = [
     "I am a good person",
     "I forgive myself and set myself free.",
     "I believe I can be all that I want to be.",
