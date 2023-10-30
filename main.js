@@ -1,14 +1,11 @@
-var affButton = document.getElementById("AffirmationButton");
-var mantrasButton = document.getElementById("MantrasButton");
-var message = document.getElementById("recieveMessage");
-var logo = document.getElementById("bigLogo");
-var disMessage = document.getElementById("displayMessage");
-var clearButton = document.getElementById("clearButton");
-
-
-
-message.addEventListener("click", choice);
-clearButton.addEventListener("click", clear);
+var affButton = document.getElementById("affirmation");
+var mantrasButton = document.getElementById("mantra");
+var message = document.querySelector(".message-form__button");
+var logo = document.querySelector(".message-display__img");
+var disMessage = document.querySelector(".message-display__blessing");
+var clearButton = document.querySelector(".message-display__button");
+message.addEventListener('click', choice);
+clearButton.addEventListener('click', clear);
 
 function getRandomAffirmation() {
   var randomAIndex = getRandomIndex(affirmations);
@@ -19,27 +16,31 @@ function getRandomMantra() {
   return mantras[randomMIndex];
 }
 
-function choice() {
+function choice(event) {
+  event.preventDefault();
   if (affButton.checked == true) {
     var randomAffirmation = getRandomAffirmation();
     disMessage.innerText = randomAffirmation;
   } else if (mantrasButton.checked == true) {
     var randomMantra = getRandomMantra();
     disMessage.innerText = randomMantra;
-  } else {
-    window.alert("Please select an option");
-    return;
+  }
+  logo.style.maxWidth = "0px";
+  clearButton.style.visibility = 'visible';
+  clearButton.style.height = "20px";
+  clearButton.style.width = "120px";
   }
 
-  logo.style.visibility = 'hidden';
-  clearButton.style.visibility = 'visible';
-}
+
 function clear(){
+  logo.style.maxWidth = "100px";
   clearButton.style.visibility = 'hidden';
-  logo.style.visibility = 'visible';
+  clearButton.style.height = "0px";
+  clearButton.style.width = "0px";
   disMessage.innerText = "";
   affButton.checked = false;
   mantrasButton.checked = false;
+  
 }
 function randomAffirmation() {
   var randomAIndex = getRandomIndex(affirmations);

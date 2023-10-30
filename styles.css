@@ -65,6 +65,8 @@ body {
 .message-form__button{
     width:180px;
     border-radius: 8px;
+    background-color:#134d72;
+    color: #ffffff;
 }
   .recieveMessage{
     display: flex;
@@ -73,30 +75,34 @@ body {
     align-items: center;
     border-radius: "1em"; 
   }
-.container2 {
+.message-display {
     align-items: center;
     background-color: #ffffff;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 20px;
-    padding-top: 30px;
     text-align: center;
     width : 75%;
 }
-#bigLogo {
+.message-display__image{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    max-width: 100px;
-    height: auto;
+    justify-content: center;
 }
-#clearButton{
+.message-display__img {
+    max-width: 100px;
+}
+.message-display__button{
+    display:flex;
+    flex-direction: column;
     visibility: hidden;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
-    height: 2rem;
+    
+    height: 0px;
+    width: 0px;
 }
+[hidden]{
+    display:none;
+  }

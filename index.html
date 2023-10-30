@@ -12,9 +12,9 @@
       <h3 class="message-form__title">What type of message?</h3>
       <form class="message-form__form">
         <div>
-          <input type="radio" id="affirmation" name="message-type" value="affirmation"/>
+          <input type="radio" id="affirmation" name="message-type" value="affirmation" required/>
           <label class="message-form__label" for="affirmation">affirmation</label>
-          <input  type="radio" id="mantra" name="message-type" value="mantra" />
+          <input  type="radio" id="mantra" name="message-type" value="mantra" required/>
           <label class="message-form__label" for="mantra">mantra</label>
         </div>
         <button class="message-form__button" type='submit'>Recieve Message</button>
@@ -22,18 +22,15 @@
       </section>
 
 
-  <section class="container2">
-    <div class="messageDisplay">
-      <p id="displayMessage"></p>
-    <img id="bigLogo"   src="/assets/meditate.svg" alt="Logo">
+  <section class="message-display">
+    <p class="message-display__blessing"></p>
+    <div class="message-display__image">
+    <img class="message-display__img"   src="/assets/meditate.svg" alt="Logo">
       <div>
-        <input type = 'button' 
-        id='clearButton' 
-        style=background-color:#2694d8 
-        value= 'Clear Message'>
+        <button id='message-display__button' type = 'button' class='message-display__button' style=background-color:#0c649c value= 'Clear Message'>Clear Message</button>
       </div>
  
-  </section class="container2">
+  </section>
   <script type="text/javascript" src="data.js"></script>  
   <script type="text/javascript" src="main.js"></script>
   </div>
