@@ -7,44 +7,66 @@ white - #ffffff;
 black - #000000;
 */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Quicksand', sans-serif;;
 }
+html{
+    height: 100%;
+}
+
 body {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
+    height:100%;
     background: linear-gradient(to bottom, #134d72 0%,#78a7c6, #f7e4bf 100%);
 }
-.prompt{
-    height: 20px;
-    padding-bottom: 20px;
+.main{
+    padding: 40px 20px;
 }
-h1{
+.content{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+.title{
+    color: white;
     font-size: 3rem;
     text-align: center;
-    margin: 1rem;
-    color: white;
-    height: auto;
-    padding-bottom: 60px;
+
 }
-h3{
-   color:white;
-    font-size: 1.5rem; 
-    padding-bottom: 5px;
+.message-form__label{
+    font-style: italic;
 }
-input {
-    margin: 0.8rem;
+  .message-form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width:100%;
   }
-.container{
-    display: inline-block;
+  .message-form__title{
+    color: white;
+    font-size: 1.5rem;
+  }
+.message-form__form{
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
     background-color: white;
     border-radius: 1em;
-    width: 50%;
     text-align: center;
+    padding:12px;
+    width:50%;
+}
+.message-form__button{
+    width:180px;
+    border-radius: 8px;
+    background-color:#134d72;
+    color: #ffffff;
 }
   .recieveMessage{
     display: flex;
@@ -53,31 +75,34 @@ input {
     align-items: center;
     border-radius: "1em"; 
   }
-.container2 {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1em;
-    width : 75%;
-    height: 100px;
-    justify-content: center;
+.message-display {
     align-items: center;
     background-color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    text-align: center;
-}
-#bigLogo {
+    border-radius: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100px;
-    height: auto;
+    text-align: center;
+    width : 75%;
 }
-#clearButton{
+.message-display__image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.message-display__img {
+    max-width: 100px;
+}
+.message-display__button{
+    display:flex;
+    flex-direction: column;
     visibility: hidden;
     align-items: center;
     justify-content: center;
-    margin: 0.5rem;
-    height: 2rem;
+    
+    height: 0px;
+    width: 0px;
 }
+[hidden]{
+    display:none;
+  }
